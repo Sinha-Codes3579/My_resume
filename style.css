@@ -1,0 +1,170 @@
+/* Ensure no unwanted margin/padding issues */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page resume */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e2e2; /* Light gray background for preview */
+}
+
+.page {
+    width: 80vw;
+    max-width: 210mm;
+    min-height: 297mm;
+    height: 100vh;
+    background-color: white !important; /* Ensures visibility */
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Header section */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+}
+
+/* Logo section */
+.logo_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+}
+
+/* Logo styling */
+.logo {
+    max-width: 80px; /* Maintain proportional size */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text section */
+.coll_name {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 1rem;
+    justify-content: left;
+}
+
+/*Contact Info*/
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns content to the right */
+    text-align: right; /* Ensures text is right-aligned */
+    width: 40%;
+    font-size: small;
+    margin-left: auto;
+    margin-right: 1%;
+}
+.contacts{
+    text-decoration: none;
+    margin-left: 3%;
+    color: black;
+}
+
+.education{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+.edu{
+    font-size: small;
+}
+
+.collg{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+}
+
+.college{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.major_project{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+.other_project{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+.responsibility{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+.area{
+    font-size: medium;
+    padding-left: 1rem;
+}
+
+.skill{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+.area_of_interest{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+
+@media (max-width: 768px) {
+    .page {
+        transform: scale(0.8); /* Shrinks the resume while keeping everything in place */
+        transform-origin: top left;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        transform: scale(0.6); /* Further reduces size on smaller screens */
+        transform-origin: top left;
+    }
+}
+
+/* 📌 Print Styles (Ensures Proper A4 Layout) */
+@media print {
+    body {
+        background: none;
+    }
+    .page {
+        width: 210mm;
+        height: 297mm;
+        box-shadow: none;
+        transform: scale(1); /* Ensures no scaling on print */
+    }
+}
