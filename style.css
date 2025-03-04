@@ -39,6 +39,7 @@ body {
     display: flex;
     align-items: center;
     width: 80%;
+    margin-right: 25%;
 }
 
 .logo img {
@@ -53,6 +54,7 @@ body {
     text-align: right;
     font-size: small;
     width: 40%;
+    padding: 0;
 }
 
 .contacts {
@@ -91,10 +93,10 @@ body {
     }
     
 
-    .logo_section,
-    .contact {
+    .logo_section {
         width: 100%;
         text-align: center;
+        margin-right: 10%;
     }
 
     .education,
